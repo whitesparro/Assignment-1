@@ -43,9 +43,7 @@ def cost(width, length):
     Returns:
         The total cost of baseboards, carpets, and a flat labor cost of $500.
     """
-    x = baseboard(width, length)
-    y = carpet(width, length)
-    c = float(x + y + 500)
+    c = float(baseboard(width, length) + carpet(width, length) + 500)
     return c
 
 
