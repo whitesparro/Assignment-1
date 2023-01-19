@@ -8,12 +8,13 @@
 def baseboard(width, length):
     """
     Purpose:
-        Calculates the cost of putting baseboards in the entire room.
+        Calculates the cost of putting baseboards in the entire room with the user inputted width and length.
+        It also asks the user to input the cost of a linear foot of baseboard.
     Parameters:
-        width: Width of the specified room.
-        length: Length of the specified room.
+        width: A numerical Width of the specified room.
+        length: A numerical Length of the specified room.
     Returns:
-        The cost required for the baseboards of the specified room.
+        The numerical cost required for the baseboards of the specified room.
     """
     x = int(((2 * width) + (2 * length)) * int(input("What is the cost of one linear foot of baseboard ($): ")))
     return x
@@ -22,10 +23,11 @@ def baseboard(width, length):
 def carpet(width, length):
     """
     Purpose:
-        Calculates the cost of carpeting the entire room.
+        Calculates the cost of carpeting the entire room with the user input width and length.
+        It also asks the user to input the cost of a square foot of carpet.
     Parameters:
-        width: Width of the specified room.
-        length: Length of the specified room.
+        width: Numerical width of the specified room.
+        length: Numerical length of the specified room.
     Returns:
         The cost required for the carpet of the specified room.
     """
@@ -36,12 +38,13 @@ def carpet(width, length):
 def cost(width, length):
     """
     Purpose:
-        Calculates the TOTAL cost of renovating the entire room.
+        Calculates the TOTAL cost of renovating the entire room, using the numerical width and numerical length of the
+        room.
     Parameters:
-        width: Width of the specified room.
-        length: Length of the specified room.
+        width: Numerical width of the specified room.
+        length: Numerical length of the specified room.
     Returns:
-        The total cost of baseboards, carpets, and a flat labor cost of $500.
+        The total numerical cost of the renovation.
     """
     c = float(baseboard(width, length) + carpet(width, length) + 500)
     return c
@@ -59,6 +62,3 @@ def main():
     print(" ")
     print("For a room of width", float(width), "feet and length of", float(length), "feet, the cost of the renovation"
           , "would be $", c)
-
-
-main()
