@@ -59,6 +59,8 @@ def main():
     width = int(input("What is the width of the room (ft): "))
     length = int(input("What is the length of the room (ft): "))
     c = cost(width, length)
-    print(" ")
-    print("For a room of width", float(width), "feet and length of", float(length), "feet, the cost of the renovation"
+    print("\n" "For a room of width", float(width), "feet and length of", float(length), "feet, the cost of the renovation"
           , "would be $", c)
+
+
+main()
